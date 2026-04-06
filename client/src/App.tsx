@@ -6,7 +6,6 @@ import RegisterPage from './pages/register';
 import PhotosPage from './pages/photosPage';
 import DevicesPage from './pages/devicesPage';
 import StatisticsPage from './pages/statisticsPage';
-import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 
 const Layout = () => {
