@@ -82,19 +82,6 @@ const App = () => {
             {/* Public routes - accessible to everyone */}
             <Route path="/" element={<HomePage />} />
 
-            {/* Auth routes - only for non-authenticated users */}
-            <Route element={<ProtectedRoute authRequired={false} />}>
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
-            </Route>
-
-            {/* Protected routes - only for authenticated users */}
-            <Route element={<ProtectedRoute authRequired={true} />}>
-              <Route path="/photos" element={<PhotosPage />} />
-              <Route path="/devices" element={<DevicesPage />} />
-              <Route path="/statistics" element={<StatisticsPage />} />
-            </Route>
-
             {/* Fallback route */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
