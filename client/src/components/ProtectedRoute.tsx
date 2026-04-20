@@ -15,7 +15,6 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ authRequired }) => {
   // Currently bypassing all auth - allowing access to all routes
 
   // Original implementation (uncomment when implementing real auth):
-  /*
   import { Navigate } from 'react-router-dom';
   import { useAuth } from '../contexts/AuthContext';
   
@@ -37,7 +36,6 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ authRequired }) => {
   if (!authRequired && isLoggedIn) {
     return <Navigate to="/" replace />;
   }
-  */
 
   // Always render the children (no authentication check)
   return <Outlet />;
